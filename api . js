@@ -1,0 +1,33 @@
+import axios from 'axios';
+
+const API_BASE = 'https://api.example.com/portfolio'; // Replace with your API endpoint
+
+export const fetchProjects = async () => {
+  try {
+    const response = await axios.get(`${API_BASE}/projects`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return [];
+  }
+};
+
+export const fetchSkills = async () => {
+  try {
+    const response = await axios.get(`${API_BASE}/skills`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching skills:", error);
+    return [];
+  }
+};
+
+export const fetchTestimonials = async () => {
+  try {
+    const response = await axios.get(`${API_BASE}/testimonials`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching testimonials:", error);
+    return [];
+  }
+};
